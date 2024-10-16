@@ -1,0 +1,26 @@
+A Program to demonstrate how to configure the multiple URLs to single interceptor:
+Programs:
+* AppConfig.java
+* AppInit.java
+* ActionHandlerController.java
+* ActionHandlerInterceptor.java
+Notes:
+* To add url path patterns InterceptorRegistration class has provided two methods, those are:
+* public InterceptorRegistration addPathPatterns(String... patterns), this method accept String var args.
+* public InterceptorRegistration addPathPatterns(List<String> patterns), this method accept List of String.
+* To exclude url path patterns also InterceptorRegistration class has provided two methods, those are:
+* public InterceptorRegistration excludePathPatterns(String... patterns), this method accept String var args.
+* public InterceptorRegistration excludePathPatterns(List<String> patterns), this method accept List of String.
+Output:
+console output for this url: http://localhost:8080/SpringInterceptorApplication4/action/actionHandler1
+From preHandle method in ActionHandlerInterceptor class
+From actionHandler1 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor class
+
+console output for this url: http://localhost:8080/SpringInterceptorApplication4/action/actionHandler2
+From preHandle method in ActionHandlerInterceptor class
+From actionHandler2 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor class
+
+console output for this url: http://localhost:8080/SpringInterceptorApplication4/action/actionHandler3
+From actionHandler3 method in ActionHandlerController class
